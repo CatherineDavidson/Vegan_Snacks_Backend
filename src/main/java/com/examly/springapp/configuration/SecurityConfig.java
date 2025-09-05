@@ -54,7 +54,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("https://vegan-snacks-frontend.vercel.app/**").permitAll()
                 // .requestMatchers(null)
                 .requestMatchers("/addVeganSnack").permitAll()
                 .requestMatchers("/getAllVeganSnacks").permitAll()
